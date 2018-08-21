@@ -28,7 +28,7 @@
 
     &__left-arm {
       stroke: cyan;
-      animation: drip 3s infinite ease-in;
+      animation: drip 3s infinite ease-in forwards;
     }
 
     &__right-arm {
@@ -37,11 +37,21 @@
   }
 
   svg {
+    position: absolute;
+    height: 100vh;
     max-width: 20%;
+  }
+
+  svg:first-of-type {
+    left: 10%;
+  }
+
+  svg:last-of-type {
+    top: 40vh;
+    left: 10%;
   }
 }
 
 @keyframes drip {
-  from {transform: skewY(0deg)}
-  to {transform: skewY(60deg)}
+  to {transform: skewY(90deg)};
 }
