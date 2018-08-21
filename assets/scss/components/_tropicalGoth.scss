@@ -1,0 +1,56 @@
+#tropical-goth {
+  position: relative;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  animation: 50s linear normal none infinite running endlessZoom;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../../assets/images/johannes-hofmann-536086-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.tropical-goth {
+  position: absolute;
+  z-index: 10;
+  top: 10vh;
+  left: 10%;
+  background: url(../../../assets/images/johannes-hofmann-536086-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: inset 0px 0px 120px 30px rgba(0, 0, 0, 0.75);
+  height: 80vh;
+  width: 80%;
+  &__title {
+    position: relative;
+    font-size: 15rem;
+    
+    &--first {
+      position: absolute;
+      top:16vh;
+      left: 10%;
+      color: black;
+      font-family: $goth-font;
+      text-shadow: 2px 2px 0px rgba(150, 0, 0, 0.75);
+    }
+
+    &--second {
+      position: absolute;
+      background: url(../../../assets/images/lemons.jpeg);
+      background-position: 0px -40px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-clip: text;
+      -webkit-background-clip: text;
+      top: 30vh;
+      left: 50%;
+      color: transparent;
+      font-family: $tropical-font;
+    }
+  }
+}
+
+@keyframes endlessZoom {
+  from {transform: scale(1, 1)}
+  to {transform: scale(2, 2)}
+}
+
