@@ -1,0 +1,47 @@
+#drippy-chandelier {
+  position: relative;
+  z-index: 20;
+  height:100vh;
+  width: 100%;
+  background: #D549C4;
+  font-family: $drippy-font;
+  color: black;
+
+  .drippy-chandelier {
+
+    &__title {
+      font-size: 17rem;
+      position: relative;
+  
+      &--first {
+        position: absolute;
+        right: 0;
+        top:4vh;
+      }
+  
+      &--second {
+        position: absolute;
+        right: 7%;
+        top: 20vh;
+      }
+    }
+
+    &__left-arm {
+      stroke: cyan;
+      animation: drip 3s infinite ease-in;
+    }
+
+    &__right-arm {
+      stroke: orangered;
+    }
+  }
+
+  svg {
+    max-width: 20%;
+  }
+}
+
+@keyframes drip {
+  from {transform: skewY(0deg)}
+  to {transform: skewY(60deg)}
+}
